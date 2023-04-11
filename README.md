@@ -1,7 +1,7 @@
-# Dino-T-Rex Project
-> 오픈소스SW및실습 15조 (No-Back)<br>
+# 오픈소스SW및실습 15조 (No-Back)
 
-Chrome 브라우저의 이스터에그인 Dino-T-Rex를 본따 만들어보는 프로젝트
+## Dino T-Rex Project
+> Chrome 브라우저의 이스터에그 **Dino T-Rex** 클론 코딩 프로젝트
 
 ## Developer
 |조장|-|-|
@@ -9,6 +9,10 @@ Chrome 브라우저의 이스터에그인 Dino-T-Rex를 본따 만들어보는 �
 |FE Developer|FE Developer|FE Developer|
 |<img src="https://github.com/Lee-s-an.png" width="150" height="150"/>|<img src="https://github.com/dlacked.png" width="150" height="150"/>|<img src="https://github.com/choms218.png" width="150" height="150"/>|
 |[이산](https://github.com/lee-s-an)|[임창용](https://github.com/dlacked)|[조미서](https://github.com/choms218)|
+
+## Repository 설명
+Dino T-Rex 개발 Repository입니다.
+
 ## Repository 사용 규칙!
 ✅ 개인 Branch에서 먼저 커밋하신 후 `Pull Request` 부탁드립니다.
 
@@ -30,4 +34,5 @@ Chrome 브라우저의 이스터에그인 Dino-T-Rex를 본따 만들어보는 �
 * !HOTFIX : 급하게 치명적인 버그를 고쳐야 하는 경우
 
 ## 사용 기술(예정)
-JavaScript, React.js
+<img src="https://img.shields.io/badge/React.js-61DAFB?style=for-the-badge&logo=React&logoColor=white"></a>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black">
