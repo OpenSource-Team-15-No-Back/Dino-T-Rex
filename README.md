@@ -4,9 +4,10 @@
 > Chrome 브라우저의 이스터에그 **Dino T-Rex** 클론 코딩 프로젝트
 
 ## Developer
-|조장|-|-|
+|팀장|-|-|
 |:---:|:---:|:---:|
 |FE Developer|FE Developer|FE Developer|
+|계획서|git 총괄|개발진행현황작성|
 |<img src="https://github.com/Lee-s-an.png" width="150" height="150"/>|<img src="https://github.com/dlacked.png" width="150" height="150"/>|<img src="https://github.com/choms218.png" width="150" height="150"/>|
 |[이산](https://github.com/lee-s-an)|[임창용](https://github.com/dlacked)|[조미서](https://github.com/choms218)|
 
