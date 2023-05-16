@@ -11,28 +11,38 @@
     background-image: url(img/trex.png);
     background-size: 50px 50px;
     position: relative;
-    top: 150px;
+    top: 140px;
+    left: 10px;
   }
   
+  
   .jump {
-    animation: jump 0.3s linear;
+    animation: jump 0.35s linear;
   }
   
   @keyframes jump {
     0% {
       top: 150px;
     }
+
+    15% {
+      top: 130px;
+    }
   
     30% {
-      top: 130px;
+      top: 110px;
     }
   
     50% {
       top: 80px;
     }
   
-    80% {
-      top: 130px;
+    70% {
+      top: 110px;
+    }
+
+    85% {
+      top:130px;
     }
   
     100% {
@@ -62,6 +72,26 @@
       left: -20px;
     }
   }
+
+  #score {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem; /* 폰트 크기 조절 */
+    font-family: Arial, sans-serif; /* 폰트 변경 */
+  }
+  
+  #game-clear-text {
+    font-size: 4rem;
+    font-family: 'Rock Salt', cursive;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  
   
   #game-over-text {
     display: none;
@@ -72,6 +102,11 @@
     font-size: 2rem;
     text-align: center;
   }
+
+  .hide {
+    display: none;
+  }
+  
   
   #game-over-text.show {
     display: block;
