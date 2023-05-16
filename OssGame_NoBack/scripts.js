@@ -31,10 +31,16 @@ function jump() {
       let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
       let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
 
-      if (!(cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140)) {
+      if (cactusLeft <= 0) { // cactus를 넘었을경우 즉, 화면에서 왼쪽으로 벗어나면 점수가 증가하도록 수정
         // 점수 증가
         scoreValue++;
         score.textContent = scoreValue;
+
+        if (scoreValue >=5) {
+          score.textContent = "";
+          document.getElementById("game-clear-text").classList.remove("hide");
+          cactus.style.display = "none"; // cactus 숨기기
+        }
       }
     }, 300);
   }
@@ -50,10 +56,12 @@ function resetGame() {
       if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140) {
           clearInterval(isAlive);
           document.getElementById("game-over-text").classList.add("show");
+          cactus.style.display = "none"; // cactus 숨기기
       }
   }, 10);
   dino.style.top = "140px";
   cactus.style.left = "500px";
+  cactus.style.display = "block"; // cactus 보이기
 
   // score 초기화
   scoreValue = 0;
