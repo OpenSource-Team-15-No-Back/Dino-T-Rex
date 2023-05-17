@@ -30,7 +30,7 @@ class Cactus{
     constructor(){
         this.x = 500; // 어디에서 나타날껀지 좌표
         this.y = 200;
-        this.width = 50; // 사이즈
+        this.width = 50; 
         this.height = 50;
     }
     draw() { // object를 가지고 그림그림
