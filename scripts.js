@@ -67,13 +67,19 @@ function resetGame() {
   scoreValue = 0;
   score.textContent = scoreValue;
 }
-
+ 
   
 
 document.addEventListener("keydown", function (event) {
-  jump();
+  if (event.key == 'ArrowUp' || event.key == ' '){  
+    jump();
+  }
 });
 
 document.getElementById("retry-button").addEventListener("click", function () {
   resetGame();
+});
+
+document.getElementById("menu-button").addEventListener("click", function () {
+  window.location.href = '../index.html'
 });

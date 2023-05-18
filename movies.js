@@ -48,3 +48,6 @@ const todaysMovie = movies[Math.floor(Math.random()*movies.length)];
 
 movie.innerText = todaysMovie.movie;
 director.innerText = todaysMovie.director;
+
+console.log(movie.innerText)
+console.log(director.innerText)
