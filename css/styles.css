@@ -1,119 +1,123 @@
 .game {
-  width: 600px;
-  height: 200px;
-  border: 1px solid black;
-  margin: auto;
-}
-
-#dino {
-  width: 50px;
-  height: 50px;
-  background-image: url(../img/trex.png);
-  background-size: 50px 50px;
-  position: relative;
-  top: 140px;
-  left: 10px;
-}
-
-
-.jump {
-  animation: jump 0.35s linear;
-}
-
-@keyframes jump {
-  0% {
-    top: 150px;
+    width: 50%;  
+    height: 263px;
+    border: 1px solid black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-
-  15% {
-    top: 130px;
+  
+  #dino {
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/trex.png);
+    background-size: 50px 50px;
+    position: relative;
+    top: 184px;
+    left: 10px;
   }
-
-  30% {
-    top: 110px;
+  
+  
+  .jump {
+    animation: jump 0.35s linear;
   }
+  
+  @keyframes jump {
+    0% {
+      top: 184px;
+    }
 
-  50% {
-    top: 80px;
+    15% {
+      top: 164px;
+    }
+  
+    30% {
+      top: 144px;
+    }
+  
+    50% {
+      top: 124px;
+    }
+  
+    70% {
+      top: 144px;
+    }
+
+    85% {
+      top:164px;
+    }
+  
+    100% {
+      top: 184px;
+    }
   }
-
-  70% {
-    top: 110px;
-  }
-
-  85% {
-    top:130px;
-  }
-
-  100% {
-    top: 150px;
-  }
-}
-
-#cactus {
-  width: 20px;
-  height: 40px;
-  position: relative;
-  top: 110px;
-  left: 580px;
-
-  background-image: url("../img/cactus.png");
-  background-size: 20px 40px;
-
-  animation: block 2.3s infinite linear;
-}
-
-@keyframes block {
-  0% {
+  
+  #cactus {
+    width: 20px;
+    height: 40px;
+    position: relative;
+    top: 145px;
     left: 580px;
+  
+    background-image: url("../img/cactus.png");
+    background-size: 20px 40px;
+  
+  animation: block 2.3s infinite linear;
+  }
+  
+  @keyframes block {
+    0% {
+      left: 580px;
+    }
+  
+    100% {
+      left: -20px;
+    }
   }
 
-  100% {
-    left: -20px;
+  #score {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem; /* 폰트 크기 조절 */
+    font-family: Arial, sans-serif; /* 폰트 변경 */
   }
-}
+  
+  #game-clear-text {
+    font-size: 4rem;
+    font-family: 'Rock Salt', cursive;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  
+  
+  #game-over-text {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    text-align: center;
+  }
 
-#score {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 3rem; /* 폰트 크기 조절 */
-  font-family: Arial, sans-serif; /* 폰트 변경 */
-}
-
-#game-clear-text {
-  font-size: 4rem;
-  font-family: 'Rock Salt', cursive;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-
-
-#game-over-text {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2rem;
-  text-align: center;
-}
-
-.hide {
-  display: none;
-}
-
-
-#game-over-text.show {
-  display: block;
-}
-
+  .hide {
+    display: none;
+  }
+  
+  
+  #game-over-text.show {
+    display: block;
+  }
+  
 button {
-  font-size: 1.5rem;
-  margin-top: 20px;
-  padding: 10px 20px;
-}
+    font-size: 1.5rem;
+    margin-top: 20px;
+    padding: 10px 20px;
+  }
+  
