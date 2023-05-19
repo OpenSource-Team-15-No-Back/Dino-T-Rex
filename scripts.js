@@ -59,7 +59,7 @@ function resetGame() {
           cactus.style.display = "none"; // cactus 숨기기
       }
   }, 10);
-  dino.style.top = "140px";
+  dino.style.top = "184px";
   cactus.style.left = "500px";
   cactus.style.display = "block"; // cactus 보이기
 
