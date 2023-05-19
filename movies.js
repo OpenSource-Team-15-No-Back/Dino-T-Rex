@@ -7,7 +7,7 @@ const movies = [
     movie: 'Do not try to be original, just try to be good.',
     director: 'Paul Rand'
     },
-    {
+    { 
     movie: 'Do not be afraid to give up the good to go for the great',
     director: 'John D. Rockefeller'
     },
@@ -45,9 +45,10 @@ const movie = document.querySelector("#movie span:first-child");
 const director = document.querySelector("#movie span:last-child");
 
 const todaysMovie = movies[Math.floor(Math.random()*movies.length)];
+console.log(todaysMovie)
 
-movie.innerText = todaysMovie.movie;
-director.innerText = todaysMovie.director;
+randomed_movie = todaysMovie.movie;
+randomed_director = todaysMovie.director;
 
-console.log(movie.innerText)
-console.log(director.innerText)
+console.log(randomed_movie)
+console.log(randomed_director)
