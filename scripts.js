@@ -84,14 +84,3 @@ document.getElementById("menu-button").addEventListener("click", function () {
   window.location.href = '../index.html'
 });
 
-document.getElementById("showInfoDinner").addEventListener("click", function () {
-  
-});
-
-document.getElementById("showInfoMovie").addEventListener("click", function () {
-  
-});
-
-document.getElementById("showInfoMusic").addEventListener("click", function () {
-  
-});
