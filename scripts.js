@@ -36,7 +36,7 @@ function jump() {
         scoreValue++;
         score.textContent = scoreValue;
 
-        if (scoreValue >=5) {
+        if (scoreValue >=1) {
           score.textContent = "";
           document.getElementById("game-clear-text").classList.remove("hide");
           cactus.style.display = "none"; // cactus 숨기기
@@ -82,4 +82,8 @@ document.getElementById("retry-button").addEventListener("click", function () {
 
 document.getElementById("menu-button").addEventListener("click", function () {
   window.location.href = '../index.html'
+});
+
+document.getElementById("showInfo").addEventListener("click", function () {
+  
 });
