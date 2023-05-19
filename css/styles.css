@@ -1,4 +1,4 @@
-.game {
+ .game {
     width: 50%;  
     height: 263px;
     border: 1px solid black;
@@ -78,32 +78,33 @@
 
   #score {
     position: absolute;
-    top: 0;
-    left: 50%;
+    top: 5%;
+    right: 3.5%;
     transform: translateX(-50%);
-    font-size: 3rem; /* 폰트 크기 조절 */
-    font-family: Arial, sans-serif; /* 폰트 변경 */
+    font-size: 2rem; /* 폰트 크기 조절 */
+    font-family: "DINO"; /* 폰트 변경 */
   }
   
   #game-clear-text {
     font-size: 4rem;
-    font-family: 'Rock Salt', cursive;
+    font-family: "DINO";
     position: absolute;
-    top: 30%;
+    text-align: center;
+    top: 35%;
     left: 50%;
     transform: translateX(-50%);
   }
   
-  
-  
   #game-over-text {
     display: none;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2rem;
+    letter-spacing: 10px;
     text-align: center;
+    font-family: "DINO";
   }
 
   .hide {
@@ -113,11 +114,41 @@
   
   #game-over-text.show {
     display: block;
+    font-family: "DINO";
   }
-  
-button {
+
+  h1{
+    text-align: center;
+    font-family: "DINO";
+    margin-top: 5%;
+  }
+
+  button {
+    color: #FFFFFF;
+    font-family: "DINO";
+    background-color: #535353;
+    border-radius: 1px;
+    position: absolute;
     font-size: 1.5rem;
-    margin-top: 20px;
-    padding: 10px 20px;
+    top: 230%;
+    left: 63%;
+    transform: translate(-50%, -50%);
   }
+
+  input.re-button {
+  position: absolute;
+  top: 230%;
+  left: 29%;
+  transform: translate(-50%, -50%);
+  background: url("../img/retry-button.png") no-repeat;
+  background-color: transparent;
+  border: none;
+  width: 37px;
+  height: 34px;
+  }
+
+@font-face {
+    font-family: "DINO";
+    src: url("../fonts/DungGeunMo.ttf");
+}
   
