@@ -7,20 +7,20 @@ let isAlive = setInterval(function () {
   // get current dino Y position
   let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
 
-  // get current cactus X position
+  // get current cactus X positio n
   let cactusLeft = parseInt(
     window.getComputedStyle(cactus).getPropertyValue("left")
   );
 
   // detect collision
-  if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140) {
+  if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 184) {
     // game over
     clearInterval(isAlive);
     document.getElementById("game-over-text").classList.add("show");
   }
 }, 10);
 
-function jump() {
+function jump() {  
   if (dino.classList != "jump") {
     dino.classList.add("jump");
 
@@ -49,11 +49,11 @@ function jump() {
 function resetGame() {
   document.getElementById("game-over-text").classList.remove("show");
   //clearInterval(isAlive);
-  isAlive = setInterval(function () {
+  isAlive = setInterval(function () { 
       let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
       let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
 
-      if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140) {
+      if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 184) {
           clearInterval(isAlive);
           document.getElementById("game-over-text").classList.add("show");
           cactus.style.display = "none"; // cactus 숨기기
