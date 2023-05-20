@@ -56,6 +56,6 @@ const movies = [
     gameClearText.classList.remove("hide");
   }
   
-  const showInfoDinner = document.getElementById("showInfoDinner");
-  showInfoDinner.addEventListener("click", showMovieInfo);
+  const showInfoMovie = document.getElementById("showInfoMovie");
+  showInfoMovie.addEventListener("click", showMovieInfo);
   

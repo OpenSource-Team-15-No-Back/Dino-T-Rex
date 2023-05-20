@@ -31,7 +31,7 @@ function jump() {
       let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
       let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
 
-      if (cactusLeft <= 0) { // cactus를 넘었을경우 즉, 화면에서 왼쪽으로 벗어나면 점수가 증가하도록 수정
+      if (cactusLeft <= 5) { // cactus를 넘었을경우 즉, 화면에서 왼쪽으로 벗어나면 점수가 증가하도록 수정
         // 점수 증가
         scoreValue++;
         score.textContent = scoreValue;
