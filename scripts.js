@@ -71,8 +71,10 @@ function resetGame() {
   
 
 document.addEventListener("keydown", function (event) {
-  if (event.key == 'ArrowUp' || event.key == ' '){  
-    jump();
+  if (event.key == 'ArrowUp' || event.key == ' '){ 
+    if (scoreValue < 5){ 
+      jump();
+    }
   }
 });
 

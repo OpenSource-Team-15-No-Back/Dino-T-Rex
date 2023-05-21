@@ -299,12 +299,14 @@ const menu = [
     
   ];
   
+  const infoElement = document.getElementById("info")
   const nameElement = document.getElementById("name");
   
   function showDinnerMenuInfo() {
     const todaysDinner = menu[Math.floor(Math.random() * menu.length)];
     const randomed_name = todaysDinner.name;
 
+    infoElement.textContent = "추천 메뉴: "
     nameElement.textContent = randomed_name;
 
     const gameClearText = document.getElementById("game-clear-text");

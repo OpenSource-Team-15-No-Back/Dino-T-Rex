@@ -401,7 +401,9 @@ const music = [
     },  
     ];
 
+const info1Element = document.getElementById("info1")
 const titleElement = document.getElementById("title");
+const info2Element = document.getElementById("info2")
 const artistElement = document.getElementById("artist");
 
 function showMusicInfo() {
@@ -409,7 +411,9 @@ function showMusicInfo() {
   const randomed_title = todaysMusic.title;
   const randomed_artist = todaysMusic.artist;
 
+  info1Element.textContent = "제목: "
   titleElement.textContent = randomed_title;
+  info2Element.textContent = "아티스트: "
   artistElement.textContent = randomed_artist;
 
   const gameClearText = document.getElementById("game-clear-text");
