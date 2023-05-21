@@ -17,6 +17,7 @@ let isAlive = setInterval(function () {
     // game over
     clearInterval(isAlive);
     document.getElementById("game-over-text").classList.add("show");
+    cactus.style.display = "none"
   }
 }, 10);
 
@@ -36,10 +37,11 @@ function jump() {
         scoreValue++;
         score.textContent = scoreValue;
 
-        if (scoreValue >=1) {
+        if (scoreValue >=5) {
           score.textContent = "";
           document.getElementById("game-clear-text").classList.remove("hide");
           cactus.style.display = "none"; // cactus 숨기기
+          
         }
       }
     }, 300);
@@ -72,7 +74,7 @@ function resetGame() {
 
 document.addEventListener("keydown", function (event) {
   if (event.key == 'ArrowUp' || event.key == ' '){ 
-    if (scoreValue < 5){ 
+    if (scoreValue < 5 && cactus.style.display != "none"){ 
       jump();
     }
   }
