@@ -83,4 +83,3 @@ document.getElementById("retry-button").addEventListener("click", function () {
 document.getElementById("menu-button").addEventListener("click", function () {
   window.location.href = '../index.html'
 });
-
