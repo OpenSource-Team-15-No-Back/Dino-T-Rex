@@ -21,19 +21,19 @@ let isAlive = setInterval(function () {
   }
 }, 10);
 
-function jump() {  
-  if (dino.classList != "jump") {
+function jump() {   
+  if (dino.classList != "jump") { 
     dino.classList.add("jump");
 
     setTimeout(function () {
       dino.classList.remove("jump");
 
       // 충돌하지 않았을 때 점수 증가
-      let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
       let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
-
-      if (cactusLeft <= 5) { // cactus를 넘었을경우 즉, 화면에서 왼쪽으로 벗어나면 점수가 증가하도록 수정
-        // 점수 증가
+      
+      console.log(cactusLeft)
+      if (cactusLeft <= 874*0.33) { // cactus를 넘었을경우 즉, 화면에서 왼쪽으로 벗어나면 점수가 증가하도록 수정
+        // 점수 증가(화면 비율에 따른 좌표 조정 필요)
         scoreValue++;
         score.textContent = scoreValue;
 
@@ -48,7 +48,7 @@ function jump() {
   }
 }
 
-function resetGame() {
+function resetGame() { 
   document.getElementById("game-over-text").classList.remove("show");
   //clearInterval(isAlive);
   isAlive = setInterval(function () { 
@@ -61,8 +61,9 @@ function resetGame() {
           cactus.style.display = "none"; // cactus 숨기기
       }
   }, 10);
+
   dino.style.top = "184px";
-  cactus.style.left = "500px";
+  cactus.style.left = "580px";
   cactus.style.display = "block"; // cactus 보이기
 
   // score 초기화
