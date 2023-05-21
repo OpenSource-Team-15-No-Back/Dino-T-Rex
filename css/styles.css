@@ -1,5 +1,6 @@
  html, body{
   margin: 0;
+  color: #525353;
  }
  .game {
     width: 50%;  
@@ -137,9 +138,10 @@
   button {
     color: #FFFFFF;
     font-family: "DINO";
-    background-color: #535353;
-    border-radius: 1px;
+    background-color: #525353;
+    border-radius: 4px;
     font-size: 1.5rem;
+    cursor: pointer;
   }
 
   input#retry-button {
@@ -151,6 +153,7 @@
   background-color: transparent;
   border: none;
   width: 37px;
+  cursor: pointer;
   height: 34px;
   }
 
@@ -159,6 +162,11 @@
     top: 230%;
     left: 63%;
     transform: translate(-50%, -50%);
+  }
+
+  #undo{
+    margin-left: 30px;
+    margin-top: 30px;
   }
 @font-face {
     font-family: "DINO";
