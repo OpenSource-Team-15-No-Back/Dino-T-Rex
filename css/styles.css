@@ -1,3 +1,6 @@
+ html, body{
+  margin: 0;
+ }
  .game {
     width: 50%;  
     height: 263px;
@@ -24,12 +27,14 @@
   }
   
   span{
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .info{
     padding-top: 50px;
   }
+
+  
   @keyframes jump {
     0% {
       top: 184px;
@@ -93,13 +98,12 @@
   }
   
   #game-clear-text {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: "DINO";
     position: absolute;
     text-align: center;
-    top: 35%;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    padding-top: 35rem;
   }
   
   #game-over-text {
@@ -135,14 +139,10 @@
     font-family: "DINO";
     background-color: #535353;
     border-radius: 1px;
-    position: absolute;
     font-size: 1.5rem;
-    top: 230%;
-    left: 63%;
-    transform: translate(-50%, -50%);
   }
 
-  input.re-button {
+  input#retry-button {
   position: absolute;
   top: 230%;
   left: 29%;
@@ -154,6 +154,12 @@
   height: 34px;
   }
 
+  .gameOverButton{
+    position: absolute;
+    top: 230%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+  }
 @font-face {
     font-family: "DINO";
     src: url("../fonts/DungGeunMo.ttf");
