@@ -1,150 +1,121 @@
- html, body{
-  margin: 0;
-  color: #525353;
- }
- .game {
-    width: 50%;  
-    height: 263px;
-    border: 1px solid black;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  #dino {
-    width: 50px;
-    height: 50px;
-    background-image: url(../img/trex.png);
-    background-size: 50px 50px;
-    position: relative;
-    top: 184px;
-    left: 10px;
-  }
-  
-  
-  .jump {
-    animation: jump 0.35s linear;
-  }
-  
-  span{
-    font-size: 20px;
-  }
+html, body{
+margin: 0;
+color: #525353;
+}
 
-  .info{
-    padding-top: 50px;
-  }
 
-  
-  @keyframes jump {
-    0% {
-      top: 184px;
-    }
+#dino {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/trex.png);
+  background-size: 50px 50px;
+  position: relative;
+  top: 184px;
+  left: 10px;
+}
 
-    15% {
-      top: 164px;
-    }
-  
-    30% {
-      top: 144px;
-    }
-  
-    50% {
-      top: 124px;
-    }
-  
-    70% {
-      top: 144px;
-    }
+#cactus {
+  width: 20px;
+  height: 40px;
+  position: relative;
+  top: 145px;
+  left: 580px;
 
-    85% {
-      top:164px;
-    }
-  
-    100% {
-      top: 184px;
-    }
-  }
-  
-  #cactus {
-    width: 20px;
-    height: 40px;
-    position: relative;
-    top: 145px;
-    left: 580px;
-  
-    background-image: url("../img/cactus.png");
-    background-size: 20px 40px;
-  
-  animation: block 2.3s infinite linear;
-  }
-  
-  @keyframes block {
-    0% {
-      left: 580px;
-    }
-  
-    100% {
-      left: -20px;
-    }
-  }
+  background-image: url("../img/cactus.png");
+  background-size: 20px 40px;
 
-  #score {
-    position: absolute;
-    top: 5%;
-    right: 3.5%;
-    transform: translateX(-50%);
-    font-size: 2rem; /* 폰트 크기 조절 */
-    font-family: "DINO"; /* 폰트 변경 */
-  }
-  
-  #game-clear-text {
-    font-size: 3rem;
-    font-family: "DINO";
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    padding-top: 35rem;
-  }
-  
-  #game-over-text {
-    display: none;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2rem;
-    letter-spacing: 10px;
-    text-align: center;
-    font-family: "DINO";
-  }
+  animation: block 2.3s infinite linear; 
+}
 
-  .hide {
-    display: none;
-  }
-  
-  
-  #game-over-text.show {
-    display: block;
-    font-family: "DINO";
-  }
+#undo{
+  margin-left: 30px;
+  margin-top: 30px;
+}
 
-  h1{
-    text-align: center;
-    font-family: "DINO";
-    margin-top: 5%;
-  }
+#score {
+  position: absolute;
+  top: 5%;
+  right: 3.5%;
+  transform: translateX(-50%);
+  font-size: 2rem; /* 폰트 크기 조절 */
+  font-family: "DINO"; /* 폰트 변경 */
+}
 
-  button {
-    color: #FFFFFF;
-    font-family: "DINO";
-    background-color: #525353;
-    border-radius: 4px;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
+#game-clear-text {
+  font-size: 3rem;
+  font-family: "DINO";
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  padding-top: 35rem;
+}
 
-  input#retry-button {
+#game-over-text {
+  display: none;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  letter-spacing: 10px;
+  text-align: center;
+  font-family: "DINO";
+}
+
+#game-over-text.show {
+  display: block;
+  font-family: "DINO";
+}
+
+.jump {
+  animation: jump 0.35s linear;
+}
+
+.game {
+  width: 50%;  
+  height: 263px;
+  border: 1px solid #525353;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.info{
+  padding-top: 50px;
+}
+
+.hide {
+  display: none;
+}
+
+.gameOverButton{
+  position: absolute;
+  top: 230%;
+  left: 63%;
+  transform: translate(-50%, -50%);
+}
+
+span{
+  font-size: 20px;
+}
+
+h1{
+  text-align: center;
+  font-family: "DINO";
+  margin-top: 5%;
+}
+
+button {
+  color: #FFFFFF;
+  font-family: "DINO";
+  background-color: #525353;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+input#retry-button {
   position: absolute;
   top: 230%;
   left: 29%;
@@ -155,21 +126,51 @@
   width: 37px;
   cursor: pointer;
   height: 34px;
-  }
+}
 
-  .gameOverButton{
-    position: absolute;
-    top: 230%;
-    left: 63%;
-    transform: translate(-50%, -50%);
-  }
 
-  #undo{
-    margin-left: 30px;
-    margin-top: 30px;
-  }
+
 @font-face {
     font-family: "DINO";
     src: url("../fonts/DungGeunMo.ttf");
 }
-  
+    
+@keyframes block {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    top: 184px;
+  }
+
+  16% {
+    top: 169px;
+  }
+
+  33% {
+    top: 134px;
+  }
+
+  49% {
+    top: 119px;
+  }
+ 
+  66% {
+    top: 134px;
+  }
+
+  82% {
+    top:169px;
+  }
+
+  100% {
+    top: 184px;
+  }
+}
