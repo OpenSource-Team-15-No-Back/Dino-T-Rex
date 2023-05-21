@@ -23,6 +23,13 @@
     animation: jump 0.35s linear;
   }
   
+  span{
+    font-size: 30px;
+  }
+
+  .info{
+    padding-top: 50px;
+  }
   @keyframes jump {
     0% {
       top: 184px;

@@ -1,43 +1,67 @@
 const movies = [
     {
-      movie: 'I never dreamed about success, I worked for it',
-      director: 'Estee Lauder'
+      movie: '분노의 질주: 라이드 오어 다이',
+      director: '루이 르테리에'
     },
     {
-      movie: 'Do not try to be original, just try to be good.',
-      director: 'Paul Rand'
+      movie: '가디언즈 오브 갤럭시 VOL. 3',
+      director: '제임스 건'
     },
     { 
-      movie: 'Do not be afraid to give up the good to go for the great',
-      director: 'John D. Rockefeller'
+      movie: '슈퍼 마리오 브라더스',
+      director: '아론 호바스, 마이클 제레닉'
     },
     {
-      movie: 'If you cannot fly then run. If you cannot run, then walk. And if you cannot walk, then crawl, but whatever you do, you have to keep moving forward.',
-      director: 'Martin Luther King Jr.'
+      movie: '인어 공주',
+      director: '롭 마샬'
     },
     {
-      movie: 'Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.',
-      director: 'Thomas Edison'
+      movie: '스즈메의 문단속',
+      director: '신카이 마코토'
     },
     {
-      movie: 'The fastest way to change yourself is to hang out with people who are already the way you want to be',
-      director: 'Reid Hoffman'
+      movie: '슬픔의 삼각형',
+      director: '루벤 외스틀룬드'
     },
     {
-      movie: 'Money is like gasoline during a road trip. You do not want to run out of gas on your trip, but you are not doing a tour of gas stations',
-      director: 'Tim O Reilly'
+      movie: '드림',
+      director: '이병헌'
     },
     {
-      movie: 'Some people dream of success, while other people get up every morning and make it happen',
-      director: 'Wayne Huizenga'
+      movie: '문재인입니다',
+      director: '이창재'
     },
     {
-      movie: 'The only thing worse than starting something and falling.. is not starting something',
-      director: 'Seth Godin'
+      movie: '엑소시스트: 더 바티칸',
+      director: '줄리어스 에이버리'
     },
     {
-      movie: 'If you really want to do something, you will find a way. If you do not, you will find an excuse.',
-      director: 'Jim Rohn'
+      movie: '거신: 바람의 아이',
+      director: '신창섭'
+    },
+    {
+      movie: '더 퍼스트 슬램덩크',
+      director: '이노우에 다케히코'
+    },
+    {
+      movie: '거울 속 외딴 성',
+      director: '하라 케이이치'
+    },
+    {
+      movie: '아기공룡 둘리 : 얼음별 대모험 리마스터링',
+      director: '임경원, 김수정'
+    },
+    {
+      movie: '말이야 바른 말이지',
+      director: '박동훈, 송현주, 김소형, 한인미, 최하나, 윤성호'
+    },
+    {
+      movie: '사슴의 왕',
+      director: '안도 마사시'
+    },
+    {
+      movie: '줄리아의 인생극장',
+      director: '올리비에 트레네'
     },
   ];
   
