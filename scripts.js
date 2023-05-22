@@ -81,6 +81,13 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
+document.addEventListener("mousedown", function (event) {
+    if (scoreValue < 5 && cactus.style.display != "none"){ 
+      jump();
+    }
+  }
+);
+
 document.getElementById("retry-button").addEventListener("click", function () {
   resetGame();
 });
