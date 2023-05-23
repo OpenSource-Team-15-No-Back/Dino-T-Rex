@@ -195,7 +195,7 @@ input#retry-button {
   width: 100%;
   height: 100vh;
   margin: 0 auto;
-  background: url("../img/theater_big.png") no-repeat;
+  background: url("../img/theater_big_2.png") no-repeat;
   background-size: cover;
   background-position: center center;
 
@@ -209,7 +209,7 @@ input#retry-button {
   margin: 0 auto;
   background: url("../img/music_background.png") no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center 40%;
 
   overflow: hidden;
 
