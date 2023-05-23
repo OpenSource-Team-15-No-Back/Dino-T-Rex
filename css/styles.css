@@ -198,7 +198,6 @@ input#retry-button {
   background: url("../img/theater_big.png") no-repeat;
   background-size: cover;
   background-position: center center;
-  margin-bottom: 100px;
 
   overflow: hidden;
 
@@ -211,7 +210,6 @@ input#retry-button {
   background: url("../img/music_background.png") no-repeat;
   background-size: cover;
   background-position: center center;
-  margin-bottom: 100px;
 
   overflow: hidden;
 
@@ -224,7 +222,6 @@ input#retry-button {
   background: url("../img/dinner_table.png") no-repeat;
   background-size: cover;
   background-position: center center;
-  margin-bottom: 100px;
 
   overflow: hidden;
 
