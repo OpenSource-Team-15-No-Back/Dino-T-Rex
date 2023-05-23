@@ -183,12 +183,15 @@ input#retry-button {
   width: 100vw;
 }
 
+.game_movie{
+  color: white;
+}
 
 .moviebackground {
   width: 100%;
   height: 100vh;
   margin: 0 auto;
-  background: url("../img/moiveB.png") no-repeat;
+  background: url("../img/theater_big.png") no-repeat;
   background-size: cover;
   background-position: center center;
   margin-bottom: 100px;
