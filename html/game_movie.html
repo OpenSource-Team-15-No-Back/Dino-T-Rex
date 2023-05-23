@@ -7,24 +7,23 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
 
-  <body>
-    </div>
+  <body class="moviebackground">
     <div class="game">
       <div id="dino"></div>
       <div id="cactus"></div>
       <div id="score">0</div>
+      <div id="game-clear-text" class="hide">
+        <button class="showInfoButton" id="showInfoMovie">Show me NOW!!!</button>
+        <div><span id="info1"></span><span id="movie"></span></div>
+        <div><span id="info2"></span><span id="director"></span></div>
+      </div>
     </div>
     <div class="container">
       <a href="../index.html"><button id="undo">◀</button></a>
       <h1>GAME_MOVIE</h1>
-      <div class = "moviebackground"></div>
+      <div id="game-over-text">GAME OVER <input id = "retry-button" type = "button" class = "gameOverButton"> <button id="menu-button" class = "gameOverButton">Menu</button></div>
     </div>
-    <div id="game-clear-text" class="hide">
-      <button class="showInfoButton" id="showInfoMovie">Show me NOW!!!</button>
-      <div><span id="info1"></span><span id="movie"></span></div>
-      <div><span id="info2"></span><span id="director"></span></div>
-    </div>
-    <div id="game-over-text">GAME OVER <input id = "retry-button" type = "button" class = "gameOverButton"> <button id="menu-button" class = "gameOverButton">Menu</button></div>
+    
       <script src="../scripts.js"></script>
     <script src="../movies.js"></script>
   </body>
