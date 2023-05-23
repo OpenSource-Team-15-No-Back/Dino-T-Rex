@@ -7,24 +7,27 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
 
-  <body class="musicbackground">
-    <div style = "border: 1px solid white;" class="game">
-      <div id="dino" style="filter: invert(100%) sepia(1%) saturate(7498%) hue-rotate(78deg) brightness(117%) contrast(100%);"></div>
-      <div id="cactus" class="note"></div>
-      <div style = "color: white;" id="score">0</div>
-      <div id="game-clear-text" class="hide">
-        <button class="showInfoButton" id="showInfoMusic">Show me NOW!!!</button>
-        <div style="color: white;"><span id="info1"></span><span id="title"></span></div>
-        <div style="color: white;"><span id="info2"></span><span id="artist"></span></div>
+  <body>
+    <div class="noEntry">지원하지 않는 화면 크기입니다.</div>
+    <div class="musicbackground">
+      <div style = "border: 1px solid white;" class="game">
+        <div id="dino" style="filter: invert(100%) sepia(1%) saturate(7498%) hue-rotate(78deg) brightness(117%) contrast(100%);"></div>
+        <div id="cactus" class="note"></div>
+        <div style = "color: white;" id="score">0</div>
+        <div id="game-clear-text" class="hide">
+          <button class="showInfoButton" id="showInfoMusic">Show me NOW!!!</button>
+          <div style="color: white;"><span id="info1"></span><span id="title"></span></div>
+          <div style="color: white;"><span id="info2"></span><span id="artist"></span></div>
+        </div>
       </div>
-    </div>
-    <div class="container">
-      <a href="../index.html"><button id="undo">◀</button></a>
-      <h1 style ="color: white;">MUSIC_SELECTED</h1>
-      <div style = "color: white;" id="game-over-text">GAME OVER <input id = "retry-button" type = "button" class = "gameOverButton"> <button id="menu-button" class = "gameOverButton">Menu</button></div>
+      <div class="container">
+        <a href="../index.html"><button id="undo">◀</button></a>
+        <h1 style ="color: white;">MUSIC_SELECTED</h1>
+        <div style = "color: white;" id="game-over-text">GAME OVER <input id = "retry-button" type = "button" class = "gameOverButton"> <button id="menu-button" class = "gameOverButton">Menu</button></div>
+      </div> 
     </div> 
+        <script src="../scripts.js"></script>
+      <script src="../music.js"></script>
 
-      <script src="../scripts.js"></script>
-    <script src="../music.js"></script>
   </body>
 </html> 
