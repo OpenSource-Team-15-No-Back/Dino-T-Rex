@@ -183,9 +183,7 @@ input#retry-button {
   width: 100vw;
 }
 
-.game_movie{
-  color: white;
-}
+
 
 .moviebackground {
   width: 100%;
@@ -199,3 +197,30 @@ input#retry-button {
   overflow: hidden;
 
 }
+
+.musicbackground {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background: url("../img/music_background.png") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 100px;
+
+  overflow: hidden;
+
+}
+
+.dinnerbackground {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background: url("../img/dinner_table.png") no-repeat;
+  background-size: cover;
+  background-position: -85px -101px;
+  margin-bottom: 100px;
+
+  overflow: hidden;
+
+}
+

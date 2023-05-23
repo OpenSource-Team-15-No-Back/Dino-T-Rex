@@ -7,21 +7,23 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
 
-  <body>
-    <a href="../index.html"><button id="undo">◀</button></a>
-    <h1>GAME_MUSIC</h1>
-    <div class="game">
+  <body class="musicbackground">
+    <div style = "border: 1px solid white;" class="game">
       <div id="dino"></div>
       <div id="cactus"></div>
-      <div id="score">0</div>
+      <div style = "color: white;" id="score">0</div>
+      <div id="game-clear-text" class="hide">
+        <button class="showInfoButton" id="showInfoMusic">Show me NOW!!!</button>
+        <div style="color: white;"><span id="info1"></span><span id="title"></span></div>
+        <div style="color: white;"><span id="info2"></span><span id="artist"></span></div>
+      </div>
     </div>
-    <div id="game-clear-text" class="hide">
-      <button id="showInfoMusic">Show me NOW!!!</button>
-      <div><span id="info1"></span><span id="title"></span></div>
-      <div><span id="info2"></span><span id="artist"></span></div>
-    
-    </div>
-    <div id="game-over-text">GAME OVER <input id = "retry-button" type = "button" class = "gameOverButton"> <button id="menu-button" class = "gameOverButton">Menu</button></div>
+    <div class="container">
+      <a href="../index.html"><button id="undo">◀</button></a>
+      <h1 style ="color: white;">GAME_MUSIC</h1>
+      <div style = "color: white;" id="game-over-text">GAME OVER <input id = "retry-button" type = "button" class = "gameOverButton"> <button id="menu-button" class = "gameOverButton">Menu</button></div>
+    </div> 
+
       <script src="../scripts.js"></script>
     <script src="../music.js"></script>
   </body>
