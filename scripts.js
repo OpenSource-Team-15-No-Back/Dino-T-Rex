@@ -37,7 +37,7 @@ function jump() {
         scoreValue++;
         score.textContent = scoreValue;
 
-        if (scoreValue >=1) {
+        if (scoreValue >=3) {
           score.textContent = "";
           document.getElementById("game-clear-text").classList.remove("hide");
           cactus.style.display = "none"; // cactus 숨기기

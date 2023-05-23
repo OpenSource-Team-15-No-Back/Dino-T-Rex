@@ -21,10 +21,21 @@ color: #525353;
   top: 145px;
   left: 580px;
 
-  background-image: url("../img/cactus.png");
   background-size: 20px 40px;
 
   animation: block 2.3s infinite linear; 
+}
+
+.popcorn{
+  background-image: url(../img/popcorn.png);
+}
+
+.note{
+  background-image: url(../img/note.png);
+}
+
+.fork{
+  background-image: url(../img/fork.png);
 }
 
 .container #undo{
@@ -78,6 +89,7 @@ color: #525353;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-image: url(../img/earth2.png);
 }
 
 .info{
@@ -119,19 +131,13 @@ input#retry-button {
   top: 230%;
   left: 29%;
   transform: translate(-50%, -50%);
-  background: url("../img/retry-button.png") no-repeat;
+  background: url("../img/re.png") no-repeat;
   background-color: transparent;
   border: none;
   width: 37px;
   cursor: pointer;
   height: 34px;
 }
-
-.showInfoButton{
-  
-}
-
-
 
 @font-face {
     font-family: "DINO";
@@ -213,11 +219,11 @@ input#retry-button {
 
 .dinnerbackground {
   width: 100%;
-  height: auto;
+  height: 100vh;
   margin: 0 auto;
   background: url("../img/dinner_table.png") no-repeat;
   background-size: cover;
-  background-position: -85px -101px;
+  background-position: center center;
   margin-bottom: 100px;
 
   overflow: hidden;
