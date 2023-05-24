@@ -314,5 +314,5 @@ const menu = [
   }
   
   const showInfoDinner = document.getElementById("showInfoDinner");
-  showInfoDinner.addEventListener("click", showDinnerMenuInfo);
+  showInfoDinner.addEventListener("click", showDinnerMenuInfo,{ once: true });
   

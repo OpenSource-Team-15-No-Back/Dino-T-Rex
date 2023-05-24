@@ -421,4 +421,4 @@ function showMusicInfo() {
 }
 
 const showInfoMusic = document.getElementById("showInfoMusic");
-showInfoMusic.addEventListener("click", showMusicInfo);
+showInfoMusic.addEventListener("click", showMusicInfo,{once: true });

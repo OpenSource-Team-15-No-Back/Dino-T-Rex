@@ -70,21 +70,30 @@ const movies = [
   const info2Element = document.getElementById("info2")
   const directorElement = document.getElementById("director");
   
+
   function showMovieInfo() {
     const todaysMovie = movies[Math.floor(Math.random() * movies.length)];
-
     const randomed_movie = todaysMovie.movie;
     const randomed_director = todaysMovie.director;
   
-    info1Element.textContent = "영화: "
+    info1Element.textContent = "영화: ";
     movieElement.textContent = randomed_movie;
-    info2Element.textContent = "감독: "
+    info2Element.textContent = "감독: ";
     directorElement.textContent = randomed_director;
   
     const gameClearText = document.getElementById("game-clear-text");
     gameClearText.classList.remove("hide");
+    
+    const gameOver= document.getElementById("game-over-text");
+    const spanElement = gameOver.querySelector("span");
+    console.log(gameOver);
+    gameOver.style.display = "block"
+    gameOver.removeChild(spanElement);
+
+
   }
   
+  
   const showInfoMovie = document.getElementById("showInfoMovie");
-  showInfoMovie.addEventListener("click", showMovieInfo);
+  showInfoMovie.addEventListener("click", showMovieInfo, { once: true });
   
