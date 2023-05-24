@@ -95,6 +95,10 @@ const movies = [
 
     gameOver.addEventListener("click", function (){
       gameOver.style.display = "none"
+      info1Element.style.display = "none"
+      movieElement.style.display = "none"
+      info2Element.style.display = "none"
+      directorElement.style.display = "none"
     })
 
   }
