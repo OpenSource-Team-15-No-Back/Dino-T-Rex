@@ -70,7 +70,8 @@ const movies = [
   const info2Element = document.getElementById("info2")
   const directorElement = document.getElementById("director");
   
-
+  var clicked = 0;
+  
   function showMovieInfo() {
     const todaysMovie = movies[Math.floor(Math.random() * movies.length)];
     const randomed_movie = todaysMovie.movie;
@@ -94,6 +95,14 @@ const movies = [
   }
   
   
-  const showInfoMovie = document.getElementById("showInfoMovie");
-  showInfoMovie.addEventListener("click", showMovieInfo, { once: true });
+  // const showInfoMovie = document.getElementById("showInfoMovie");
+  // showInfoMovie.addEventListener("click", showMovieInfo, { once: true });
   
+  const showInfoMovie = document.getElementById("showInfoMovie")
+  showInfoMovie.addEventListener("click", function () {
+    showMovieInfo()
+    clicked++
+    if (clicked == 1){
+      showInfoMovie.style.display = "none"
+    }
+  })

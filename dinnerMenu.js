@@ -302,6 +302,8 @@ const menu = [
   const infoElement = document.getElementById("info")
   const nameElement = document.getElementById("name");
   
+  var clicked = 0
+
   function showDinnerMenuInfo() {
     const todaysDinner = menu[Math.floor(Math.random() * menu.length)];
     const randomed_name = todaysDinner.name;
@@ -313,6 +315,14 @@ const menu = [
     gameClearText.classList.remove("hide");
   }
   
-  const showInfoDinner = document.getElementById("showInfoDinner");
-  showInfoDinner.addEventListener("click", showDinnerMenuInfo,{ once: true });
-  
+  // const showInfoDinner = document.getElementById("showInfoDinner");
+  // showInfoDinner.addEventListener("click", showDinnerMenuInfo,{ once: true });
+
+  const showInfoDinner = document.getElementById("showInfoDinner")
+  showInfoDinner.addEventListener("click", function () {
+    showDinnerMenuInfo()
+    clicked++
+    if (clicked == 1){
+      showInfoDinner.style.display = "none"
+    }
+  })

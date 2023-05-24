@@ -406,6 +406,7 @@ const titleElement = document.getElementById("title");
 const info2Element = document.getElementById("info2")
 const artistElement = document.getElementById("artist");
 
+var clicked = 0
 function showMusicInfo() {
   const todaysMusic = music[Math.floor(Math.random() * music.length)];
   const randomed_title = todaysMusic.title;
@@ -420,5 +421,14 @@ function showMusicInfo() {
   gameClearText.classList.remove("hide");
 }
 
-const showInfoMusic = document.getElementById("showInfoMusic");
-showInfoMusic.addEventListener("click", showMusicInfo,{once: true });
+// const showInfoMusic = document.getElementById("showInfoMusic");
+// showInfoMusic.addEventListener("click", showMusicInfo,{once: true });
+
+const showInfoMusic = document.getElementById("showInfoMusic")
+showInfoMusic.addEventListener("click", function () {
+  showMusicInfo()
+    clicked++
+    if (clicked == 1){
+      showInfoMusic.style.display = "none"
+    }
+  })
