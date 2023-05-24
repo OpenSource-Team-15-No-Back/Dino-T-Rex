@@ -90,11 +90,19 @@ const movies = [
     console.log(gameOver);
     gameOver.style.display = "block"
     gameOver.removeChild(spanElement);
+    gameOver.style.width = "200px"
+    gameOver.style.height = "50px"
 
+    gameOver.addEventListener("click", function (){
+      gameOver.style.display = "none"
+    })
 
   }
   
-  
+  // gameOver.addEventListener("click", function (){
+  //   gameOver.style.display = "none"
+  // })
+
   // const showInfoMovie = document.getElementById("showInfoMovie");
   // showInfoMovie.addEventListener("click", showMovieInfo, { once: true });
   
