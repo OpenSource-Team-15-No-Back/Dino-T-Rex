@@ -109,7 +109,7 @@ const movies = [
 
   // const showInfoMovie = document.getElementById("showInfoMovie");
   // showInfoMovie.addEventListener("click", showMovieInfo, { once: true });
-  
+  //수정해야할 부분
   const showInfoMovie = document.getElementById("showInfoMovie")
   showInfoMovie.addEventListener("click", function () {
     showMovieInfo()
