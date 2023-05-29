@@ -2,6 +2,9 @@ const dino = document.getElementById("dino");
 const cactus = document.getElementById("cactus");
 const score = document.getElementById("score");
 let scoreValue = 0;
+var audio1 = new Audio("../audio/jump.mp3");
+var audio2 = new Audio("../audio/reach_score.mp3");
+var audio3 = new Audio("../audio/game_over.mp3");
 
 let isAlive = setInterval(function () {
   // get current dino Y position
@@ -18,6 +21,7 @@ let isAlive = setInterval(function () {
     clearInterval(isAlive);
     document.getElementById("game-over-text").classList.add("show");
     cactus.style.display = "none"
+    audio3.play();
   }
 }, 10);
 
@@ -41,7 +45,7 @@ function jump() {
           score.textContent = "";
           document.getElementById("game-clear-text").classList.remove("hide");
           cactus.style.display = "none"; // cactus 숨기기
-          
+          audio2.play();
         }
       }
     }, 300);
@@ -76,7 +80,8 @@ function resetGame() {
 document.addEventListener("keydown", function (event) {
   event.preventDefault();
   if (event.key == 'ArrowUp' || event.key == ' '){ 
-    if (scoreValue < 5 && cactus.style.display != "none"){ 
+    audio1.play();
+    if (scoreValue < 3 && cactus.style.display != "none"){ 
       jump();
     }
   }
@@ -84,8 +89,12 @@ document.addEventListener("keydown", function (event) {
 
 document.getElementById("retry-button").addEventListener("click", function () {
   resetGame();
+  audio1.play();
 });
 
 document.getElementById("menu-button").addEventListener("click", function () {
-  window.location.href = '../index.html'
+  audio1.play();
+  setTimeout(function() {
+    window.location.href = '../index.html';
+  }, 135); 
 });
