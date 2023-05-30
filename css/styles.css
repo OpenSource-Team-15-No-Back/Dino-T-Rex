@@ -77,6 +77,12 @@ color: #525353;
   font-family: "DINO";
 }
 
+#showInfo{
+  top: 50%;
+  left: 50%;
+  transform: translate(195%, 220%);
+}
+
 .jump {
   animation: jump 0.35s linear;
 }
