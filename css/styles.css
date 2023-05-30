@@ -107,6 +107,13 @@ color: #525353;
   transform: translate(-50%, -50%);
 }
 
+.gameClearButton{
+  position: absolute;
+  top: 140%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
 span{
   font-size: 20px;
 }
@@ -126,11 +133,23 @@ button {
   cursor: pointer;
 }
 
-input#retry-button {
-  position: absolute;
+input#over-retry-button {
+  position: absolute; 
   top: 230%;
   left: 29%;
   transform: translate(-50%, -50%);
+  background: url("../img/re.png") no-repeat;
+  background-color: transparent;
+  border: none;
+  width: 37px;
+  cursor: pointer;
+  height: 34px;
+}
+
+input#clear-retry-button {
+  position: absolute;
+  top: 140%;
+  left: 46%;
   background: url("../img/re.png") no-repeat;
   background-color: transparent;
   border: none;

@@ -73,6 +73,10 @@ const movies = [
   var clicked = 0;
   
   function showMovieInfo() {
+    const gameClearText = document.getElementById("game-clear-text")
+    const clicked_retry = document.getElementById("clear-retry-button")
+    gameClearText.classList.remove("hide")
+
     const todaysMovie = movies[Math.floor(Math.random() * movies.length)];
     const randomed_movie = todaysMovie.movie;
     const randomed_director = todaysMovie.director;
@@ -82,24 +86,30 @@ const movies = [
     info2Element.textContent = "감독: ";
     directorElement.textContent = randomed_director;
   
-    const gameClearText = document.getElementById("game-clear-text");
-    gameClearText.classList.remove("hide");
-    
-    const gameOver= document.getElementById("game-over-text");
-    const spanElement = gameOver.querySelector("span");
-    console.log(gameOver);
-    gameOver.style.display = "block"
-    gameOver.removeChild(spanElement);
-    gameOver.style.width = "200px"
-    gameOver.style.height = "50px"
+    showMeNow_show.style.display = "none"
 
-    gameOver.addEventListener("click", function (){
-      gameOver.style.display = "none"
-      info1Element.style.display = "none"
-      movieElement.style.display = "none"
-      info2Element.style.display = "none"
-      directorElement.style.display = "none"
+    clicked_retry.addEventListener("click", function(){
+      gameClearText.classList.add("hide")
     })
+    
+    // const gameClearText = document.getElementById("game-clear-text");
+    // gameClearText.classList.remove("hide");
+    
+    // const gameOver= document.getElementById("game-over-text");
+    // const spanElement = gameOver.querySelector("span");
+    // console.log(gameOver);
+    // gameOver.style.display = "block"
+    // gameOver.removeChild(spanElement);
+    // gameOver.style.width = "200px"
+    // gameOver.style.height = "50px"
+
+    // gameOver.addEventListener("click", function (){
+    //   gameOver.style.display = "none"
+    //   info1Element.style.display = "none"
+    //   movieElement.style.display = "none"
+    //   info2Element.style.display = "none"
+    //   directorElement.style.display = "none"
+    // })
 
   }
   
@@ -111,10 +121,9 @@ const movies = [
   // showInfoMovie.addEventListener("click", showMovieInfo, { once: true });
   //수정해야할 부분
   const showInfoMovie = document.getElementById("showInfoMovie")
-  showInfoMovie.addEventListener("click", function () {
+  showInfoMovie.addEventListener("click", function () { //showInfoMovie 클릭 시
+    // Movie에서 show me Now!!! 버튼을 생성하는 코드를 찾을 수 없음
+    console.log(1)
     showMovieInfo()
-    clicked++
-    if (clicked == 1){
-      showInfoMovie.style.display = "none"
-    }
+    showInfoMovie.style.display = "none"
   })

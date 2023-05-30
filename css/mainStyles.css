@@ -68,7 +68,6 @@ a:hover {
   .noEntry {
     display: grid;
     place-items: center;
-    margin-top: 50%;
   }
 
   .dinoex h1 {

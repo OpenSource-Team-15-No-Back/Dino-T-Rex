@@ -6,6 +6,9 @@ var audio1 = new Audio("../audio/jump.mp3");
 var audio2 = new Audio("../audio/reach_score.mp3");
 var audio3 = new Audio("../audio/game_over.mp3");
 
+const showMeNow_show = document.getElementById("showInfoMovie")
+showMeNow_show.style.display = "none"
+
 let isAlive = setInterval(function () {
   // get current dino Y position
   let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
@@ -43,7 +46,8 @@ function jump() {
 
         if (scoreValue >=3) {
           score.textContent = "";
-          document.getElementById("game-clear-text").classList.remove("hide");
+          //document.getElementById("game-clear-text").classList.remove("hide");
+          showMeNow_show.style.display = "block"
           cactus.style.display = "none"; // cactus 숨기기
           audio2.play();
         }
@@ -53,7 +57,9 @@ function jump() {
 }
 
 function resetGame() { 
+  
   document.getElementById("game-over-text").classList.remove("show");
+  document.getElementById
   //clearInterval(isAlive);
   isAlive = setInterval(function () { 
       let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
@@ -87,12 +93,24 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-document.getElementById("retry-button").addEventListener("click", function () {
+document.getElementById("over-retry-button").addEventListener("click", function () {
   resetGame();
   audio1.play();
 });
 
-document.getElementById("menu-button").addEventListener("click", function () {
+document.getElementById("over-menu-button").addEventListener("click", function () {
+  audio1.play();
+  setTimeout(function() {
+    window.location.href = '../index.html';
+  }, 135); 
+});
+
+document.getElementById("clear-retry-button").addEventListener("click", function () {
+  resetGame();
+  audio1.play();
+});
+
+document.getElementById("clear-menu-button").addEventListener("click", function () {
   audio1.play();
   setTimeout(function() {
     window.location.href = '../index.html';
