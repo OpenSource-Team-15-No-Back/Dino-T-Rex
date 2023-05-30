@@ -6,9 +6,8 @@ var audio1 = new Audio("../audio/jump.mp3");
 var audio2 = new Audio("../audio/reach_score.mp3");
 var audio3 = new Audio("../audio/game_over.mp3");
 
-const showMeNow_show = document.getElementById("showInfoMovie")
+const showMeNow_show = document.getElementById("showInfo")
 showMeNow_show.style.display = "none"
-
 let isAlive = setInterval(function () {
   // get current dino Y position
   let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
