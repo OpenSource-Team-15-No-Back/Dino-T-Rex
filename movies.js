@@ -121,9 +121,7 @@ const movies = [
   // showInfoMovie.addEventListener("click", showMovieInfo, { once: true });
   //수정해야할 부분
   const showInfo = document.getElementById("showInfo")
-  showInfo.addEventListener("click", function () { //showInfoMovie 클릭 시
-    // Movie에서 show me Now!!! 버튼을 생성하는 코드를 찾을 수 없음
-    console.log(1)
+  showInfo.addEventListener("click", function () {
     showMovieInfo()
     showInfo.style.display = "none"
   })

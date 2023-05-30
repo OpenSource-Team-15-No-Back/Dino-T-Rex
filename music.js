@@ -408,6 +408,10 @@ const artistElement = document.getElementById("artist");
 
 var clicked = 0
 function showMusicInfo() {
+  const gameClearText = document.getElementById("game-clear-text")
+  const clicked_retry = document.getElementById("clear-retry-button")
+  gameClearText.classList.remove("hide")
+
   const todaysMusic = music[Math.floor(Math.random() * music.length)];
   const randomed_title = todaysMusic.title;
   const randomed_artist = todaysMusic.artist;
@@ -417,18 +421,18 @@ function showMusicInfo() {
   info2Element.textContent = "아티스트: "
   artistElement.textContent = randomed_artist;
 
-  const gameClearText = document.getElementById("game-clear-text");
-  gameClearText.classList.remove("hide");
-}
+  showMeNow_show.style.display = "none"
 
+  clicked_retry.addEventListener("click", function(){
+    gameClearText.classList.add("hide")
+  })
+    
+}
 // const showInfoMusic = document.getElementById("showInfoMusic");
 // showInfoMusic.addEventListener("click", showMusicInfo,{once: true });
 
-const showInfoMusic = document.getElementById("showInfoMusic")
-showInfoMusic.addEventListener("click", function () {
+const showInfo = document.getElementById("showInfo")
+showInfo.addEventListener("click", function () {
   showMusicInfo()
-    clicked++
-    if (clicked == 1){
-      showInfoMusic.style.display = "none"
-    }
-  })
+  showInfo.style.display = "none"
+})
