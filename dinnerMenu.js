@@ -305,24 +305,28 @@ const menu = [
   var clicked = 0
 
   function showDinnerMenuInfo() {
+    const gameClearText = document.getElementById("game-clear-text")
+    const clicked_retry = document.getElementById("clear-retry-button")
+    gameClearText.classList.remove("hide")
+
     const todaysDinner = menu[Math.floor(Math.random() * menu.length)];
     const randomed_name = todaysDinner.name;
 
     infoElement.textContent = "추천 메뉴: "
     nameElement.textContent = randomed_name;
 
-    const gameClearText = document.getElementById("game-clear-text");
-    gameClearText.classList.remove("hide");
+    showMeNow_show.style.display = "none"
+
+    clicked_retry.addEventListener("click", function(){
+      gameClearText.classList.add("hide")
+    })
   }
   
   // const showInfoDinner = document.getElementById("showInfoDinner");
   // showInfoDinner.addEventListener("click", showDinnerMenuInfo,{ once: true });
 
-  const showInfoDinner = document.getElementById("showInfoDinner")
-  showInfoDinner.addEventListener("click", function () {
+  const showInfo = document.getElementById("showInfo")
+  showInfo.addEventListener("click", function () {
     showDinnerMenuInfo()
-    clicked++
-    if (clicked == 1){
-      showInfoDinner.style.display = "none"
-    }
+    showInfo.style.display = "none"
   })
