@@ -115,3 +115,14 @@ document.getElementById("clear-menu-button").addEventListener("click", function 
     window.location.href = '../index.html';
   }, 135); 
 });
+
+document.getElementById("showInfo").addEventListener("click",function() {
+  audio1.play();
+})
+
+document.getElementById("undo").addEventListener("click",function() {
+  audio1.play();
+  setTimeout(function() {
+    window.location.href = '../index.html';
+  }, 200);
+});
