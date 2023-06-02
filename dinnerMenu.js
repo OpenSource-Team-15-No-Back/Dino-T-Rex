@@ -303,6 +303,32 @@ const menu = [
   
   var clicked = 0
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const audioElement = document.createElement("audio")
+    audioElement.src = "../audio/chapter1.mp3"
+
+    const playButton = document.getElementById("playButton")
+    const muteButton = document.getElementById("muteButton")
+
+    audioElement.muted = false
+    muteButton.textContent = "음소거"
+
+    playButton.addEventListener("click", function() {
+      audioElement.play()
+    })
+
+    muteButton.addEventListener("click", function() {
+      if (audioElement.muted) {
+        audioElement.muted = false
+        muteButton.textContent = "음소거"
+      } else{
+        audioElement.muted = true
+        muteButton.textContent = "음소거 해제"
+      }
+    })
+    document.body.appendChild(audioElement)
+  })
+
   function showDinnerMenuInfo() {
     const gameClearText = document.getElementById("game-clear-text")
     const clicked_retry = document.getElementById("clear-retry-button")

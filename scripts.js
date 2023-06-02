@@ -12,17 +12,13 @@ var audio3 = new Audio("../audio/game_over.mp3");
 const showMeNow_show = document.getElementById("showInfo")
 showMeNow_show.style.display = "none"
 let isAlive = setInterval(function () {
-  // get current dino Y position
   let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
 
-  // get current cactus X positio n
   let cactusLeft = parseInt(
     window.getComputedStyle(cactus).getPropertyValue("left")
   );
 
-  // detect collision
   if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 184) {
-    // game over
     clearInterval(isAlive);
     document.getElementById("game-over-text").classList.add("show");
     cactus.style.display = "none"
@@ -46,19 +42,17 @@ function jump() {
     setTimeout(function () {
       dino.classList.remove("jump");
 
-      // 충돌하지 않았을 때 점수 증가
       let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
       
       console.log(cactusLeft)
-      if (cactusLeft >= 856 && cactusLeft <= 895) { // cactus를 넘었을경우 즉, 화면에서 왼쪽으로 벗어나면 점수가 증가하도록 수정
-        // 점수 증가(화면 비율에 따른 좌표 조정 필요
+      if (cactusLeft >= 856 && cactusLeft <= 895) {
         scoreValue++;
         score.textContent = scoreValue;
 
         if (scoreValue >=5) {
           score.textContent = "";
           showMeNow_show.style.display = "block"
-          cactus.style.display = "none"; // cactus 숨기기
+          cactus.style.display = "none"; 
           audio2.play();
         }
       } else if (cactusLeft <= 855 && cactusLeft >= 825){
@@ -82,16 +76,15 @@ function resetGame() {
       if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 184) {
           clearInterval(isAlive);
           document.getElementById("game-over-text").classList.add("show");
-          cactus.style.display = "none"; // cactus 숨기기
+          cactus.style.display = "none"; 
           audio3.play();
       }
   }, 10);
 
   dino.style.top = "184px";
   cactus.style.left = "580px";
-  cactus.style.display = "block"; // cactus 보이기
+  cactus.style.display = "block"; 
 
-  // score 초기화
   scoreValue = 0;
   score.textContent = scoreValue;
 }
@@ -100,16 +93,6 @@ document.addEventListener("keydown", function (event) {
   event.preventDefault();
   if (event.key == 'ArrowUp' || event.key == ' '){
     if (scoreValue < 5 && cactus.style.display != "none"){ 
-      // count++
-      // if (count % 4 == 0){
-      //   audio1.play()
-      // } else if (count % 4 == 1){
-      //   audio4.play()
-      // } else if (count % 4 == 2){
-      //   audio5.play()
-      // }else{
-      //   audio6.play()
-      // }
       jump();
     }
   }
