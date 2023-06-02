@@ -111,7 +111,7 @@ document.getElementById("clear-menu-button").addEventListener("click", function 
   audio1.play();
   setTimeout(function() {
     window.location.href = '../index.html';
-  }, 135); 
+  }, 180); 
 });
 
 document.getElementById("showInfo").addEventListener("click",function() {
