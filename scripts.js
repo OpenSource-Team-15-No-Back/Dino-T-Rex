@@ -50,7 +50,7 @@ function jump() {
       let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
       
       console.log(cactusLeft)
-      if (cactusLeft >= 850 && cactusLeft <= 895) { // cactus를 넘었을경우 즉, 화면에서 왼쪽으로 벗어나면 점수가 증가하도록 수정
+      if (cactusLeft >= 856 && cactusLeft <= 895) { // cactus를 넘었을경우 즉, 화면에서 왼쪽으로 벗어나면 점수가 증가하도록 수정
         // 점수 증가(화면 비율에 따른 좌표 조정 필요
         scoreValue++;
         score.textContent = scoreValue;
@@ -61,6 +61,12 @@ function jump() {
           cactus.style.display = "none"; // cactus 숨기기
           audio2.play();
         }
+      } else if (cactusLeft <= 855 && cactusLeft >= 825){
+        console.log("실패")
+        clearInterval(isAlive);
+        document.getElementById("game-over-text").classList.add("show");
+        cactus.style.display = "none"
+        audio3.play();
       }
     }, 300);
   }
