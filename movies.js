@@ -92,34 +92,8 @@ const movies = [
       gameClearText.classList.add("hide")
     })
     
-    // const gameClearText = document.getElementById("game-clear-text");
-    // gameClearText.classList.remove("hide");
-    
-    // const gameOver= document.getElementById("game-over-text");
-    // const spanElement = gameOver.querySelector("span");
-    // console.log(gameOver);
-    // gameOver.style.display = "block"
-    // gameOver.removeChild(spanElement);
-    // gameOver.style.width = "200px"
-    // gameOver.style.height = "50px"
-
-    // gameOver.addEventListener("click", function (){
-    //   gameOver.style.display = "none"
-    //   info1Element.style.display = "none"
-    //   movieElement.style.display = "none"
-    //   info2Element.style.display = "none"
-    //   directorElement.style.display = "none"
-    // })
-
   }
   
-  // gameOver.addEventListener("click", function (){
-  //   gameOver.style.display = "none"
-  // })
-
-  // const showInfoMovie = document.getElementById("showInfoMovie");
-  // showInfoMovie.addEventListener("click", showMovieInfo, { once: true });
-  //수정해야할 부분
   const showInfo = document.getElementById("showInfo")
   showInfo.addEventListener("click", function () {
     showMovieInfo()

@@ -296,7 +296,6 @@ const menu = [
     {
       name: '로제파스타',
     },
-    
   ];
   
   const infoElement = document.getElementById("info")
@@ -322,9 +321,6 @@ const menu = [
     })
   }
   
-  // const showInfoDinner = document.getElementById("showInfoDinner");
-  // showInfoDinner.addEventListener("click", showDinnerMenuInfo,{ once: true });
-
   const showInfo = document.getElementById("showInfo")
   showInfo.addEventListener("click", function () {
     showDinnerMenuInfo()

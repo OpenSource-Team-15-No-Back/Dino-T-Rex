@@ -37,15 +37,14 @@ function jump() {
       // 충돌하지 않았을 때 점수 증가
       let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
       
-      if (cactusLeft >= 843) { // cactus를 넘었을경우 즉, 화면에서 왼쪽으로 벗어나면 점수가 증가하도록 수정
+      console.log(cactusLeft)
+      if (cactusLeft >= 850 && cactusLeft <= 895) { // cactus를 넘었을경우 즉, 화면에서 왼쪽으로 벗어나면 점수가 증가하도록 수정
         // 점수 증가(화면 비율에 따른 좌표 조정 필요
-        //console.log(cactusLeft)
         scoreValue++;
         score.textContent = scoreValue;
 
-        if (scoreValue >=3) {
+        if (scoreValue >=5) {
           score.textContent = "";
-          //document.getElementById("game-clear-text").classList.remove("hide");
           showMeNow_show.style.display = "block"
           cactus.style.display = "none"; // cactus 숨기기
           audio2.play();
@@ -58,8 +57,7 @@ function jump() {
 function resetGame() { 
   
   document.getElementById("game-over-text").classList.remove("show");
-  document.getElementById
-  //clearInterval(isAlive);
+
   isAlive = setInterval(function () { 
       let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
       let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
@@ -86,7 +84,7 @@ document.addEventListener("keydown", function (event) {
   event.preventDefault();
   if (event.key == 'ArrowUp' || event.key == ' '){ 
     audio1.play();
-    if (scoreValue < 3 && cactus.style.display != "none"){ 
+    if (scoreValue < 5 && cactus.style.display != "none"){ 
       jump();
     }
   }
