@@ -3,6 +3,9 @@ const cactus = document.getElementById("cactus");
 const score = document.getElementById("score");
 let scoreValue = 0;
 var audio1 = new Audio("../audio/jump.mp3");
+var audio4 = new Audio("../audio/jump.mp3");
+var audio5 = new Audio("../audio/jump.mp3");
+var audio6 = new Audio("../audio/jump.mp3");
 var audio2 = new Audio("../audio/reach_score.mp3");
 var audio3 = new Audio("../audio/game_over.mp3");
 
@@ -27,10 +30,19 @@ let isAlive = setInterval(function () {
   }
 }, 10);
 
-function jump() {   
+function jump() {
   if (dino.classList != "jump") { 
     dino.classList.add("jump");
-
+    count++
+    if (count % 4 == 0){
+      audio1.play()
+    } else if (count % 4 == 1){
+      audio4.play()
+    } else if (count % 4 == 2){
+      audio5.play()
+    }else{
+      audio6.play()
+    }
     setTimeout(function () {
       dino.classList.remove("jump");
 
@@ -77,18 +89,27 @@ function resetGame() {
   scoreValue = 0;
   score.textContent = scoreValue;
 }
- 
-  
 
 document.addEventListener("keydown", function (event) {
   event.preventDefault();
-  if (event.key == 'ArrowUp' || event.key == ' '){ 
-    audio1.play();
+  if (event.key == 'ArrowUp' || event.key == ' '){
     if (scoreValue < 5 && cactus.style.display != "none"){ 
+      // count++
+      // if (count % 4 == 0){
+      //   audio1.play()
+      // } else if (count % 4 == 1){
+      //   audio4.play()
+      // } else if (count % 4 == 2){
+      //   audio5.play()
+      // }else{
+      //   audio6.play()
+      // }
       jump();
     }
   }
 });
+
+var count = 0
 
 document.getElementById("over-retry-button").addEventListener("click", function () {
   resetGame();
@@ -96,7 +117,6 @@ document.getElementById("over-retry-button").addEventListener("click", function 
 });
 
 document.getElementById("over-menu-button").addEventListener("click", function () {
-  audio1.play();
   setTimeout(function() {
     window.location.href = '../index.html';
   }, 135); 
