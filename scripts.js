@@ -62,7 +62,6 @@ function jump() {
           audio2.play();
         }
       } else if (cactusLeft <= 855 && cactusLeft >= 825){
-        console.log("실패")
         clearInterval(isAlive);
         document.getElementById("game-over-text").classList.add("show");
         cactus.style.display = "none"
@@ -84,6 +83,7 @@ function resetGame() {
           clearInterval(isAlive);
           document.getElementById("game-over-text").classList.add("show");
           cactus.style.display = "none"; // cactus 숨기기
+          audio3.play();
       }
   }, 10);
 
