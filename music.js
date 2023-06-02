@@ -1,5 +1,5 @@
 const music = [
-    {
+  {
     title: 'I AM',
     artist: 'IVE (아이브)'
     },
@@ -428,8 +428,6 @@ function showMusicInfo() {
   })
     
 }
-// const showInfoMusic = document.getElementById("showInfoMusic");
-// showInfoMusic.addEventListener("click", showMusicInfo,{once: true });
 
 const showInfo = document.getElementById("showInfo")
 showInfo.addEventListener("click", function () {
