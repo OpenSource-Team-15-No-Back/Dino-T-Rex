@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dino Game</title>
-    <link rel="icon" type="image/png" href="popcorn.png">
+    <link rel="icon" type="image/png" href="popcorn.png" />
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
 
   <body>
     <div class="noEntry">지원하지 않는 화면 크기입니다.</div>
-      <div class="moviebackground">
+    <div class="moviebackground">
+      <button id="playButton">재생</button>
+      <button id="muteButton">음소거</button>
       <div class="game">
         <div id="dino"></div>
         <div id="cactus" class="popcorn"></div>
@@ -19,22 +21,25 @@
         <div id="game-clear-text" class="hide">
           <div><span id="info1"></span><span id="movie"></span></div>
           <div><span id="info2"></span><span id="director"></span></div>
-          <input id = "clear-retry-button" type = "button" class = "gameClearButton"> 
-          <button id="clear-menu-button" class = "gameClearButton">Menu</button>
+          <input
+            id="clear-retry-button"
+            type="button"
+            class="gameClearButton" />
+          <button id="clear-menu-button" class="gameClearButton">Menu</button>
         </div>
       </div>
       <div class="container">
         <button id="undo">◀</button>
-        <h1 style ="color: white;">MOVIE_SELECTED</h1>
+        <h1 style="color: white">MOVIE_SELECTED</h1>
         <div id="game-over-text">
           <span>GAME OVER </span>
-          <input id = "over-retry-button" type = "button" class = "gameOverButton"> 
-          <button id="over-menu-button" class = "gameOverButton">Menu</button>
+          <input id="over-retry-button" type="button" class="gameOverButton" />
+          <button id="over-menu-button" class="gameOverButton">Menu</button>
         </div>
       </div>
     </div>
-    
-      <script src="../scripts.js"></script>
+
+    <script src="../scripts.js"></script>
     <script src="../movies.js"></script>
   </body>
 </html>

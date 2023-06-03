@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dino Game</title>
-    <link rel="icon" type="image/png" href="fork.png">
+    <link rel="icon" type="image/png" href="fork.png" />
     <link rel="stylesheet" href="../css/styles.css" />
     <style>
-      #game-clear-text{
+      #game-clear-text {
         margin-top: 28px;
         line-height: 120%;
       }
@@ -17,26 +17,38 @@
   <body>
     <div class="noEntry">지원하지 않는 화면 크기입니다.</div>
     <div class="dinnerbackground">
-      <div style="border: 1px solid paleturquoise;" class="game">
-        <button id="playButton">재생</button>
-        <button id="muteButton">음소거</button>
-        <div id="dino" style="filter: invert(93%) sepia(17%) saturate(557%) hue-rotate(121deg) brightness(98%) contrast(90%);"></div>
-        <div id="cactus" class="fork "></div>
-        <div style="color: #afeeee;" id="score">0</div>
-        <button id="showInfo">Show me NOW!!!<audio scr = "../audio/jump.mp3"></audio></button>
+      <button id="playButton">재생</button>
+      <button id="muteButton">음소거</button>
+      <div style="border: 1px solid paleturquoise" class="game">
+        <div
+          id="dino"
+          style="
+            filter: invert(93%) sepia(17%) saturate(557%) hue-rotate(121deg)
+              brightness(98%) contrast(90%);
+          "></div>
+        <div id="cactus" class="fork"></div>
+        <div style="color: #afeeee" id="score">0</div>
+        <button id="showInfo">
+          Show me NOW!!!<audio scr="../audio/jump.mp3"></audio>
+        </button>
         <div id="game-clear-text" class="hide">
-          <div style="color: paleturquoise;"><span id="info"></span><span id="name"></span></div>
-          <input id = "clear-retry-button" type = "button" class = "gameClearButton"> 
-          <button id="clear-menu-button" class = "gameClearButton">Menu</button>
+          <div style="color: paleturquoise">
+            <span id="info"></span><span id="name"></span>
+          </div>
+          <input
+            id="clear-retry-button"
+            type="button"
+            class="gameClearButton" />
+          <button id="clear-menu-button" class="gameClearButton">Menu</button>
         </div>
       </div>
       <div class="container">
         <button id="undo">◀</button>
-        <h1 style="color: paleturquoise;">DINNER_SELECTED</h1>
-        <div style="color: paleturquoise;" id="game-over-text">
+        <h1 style="color: paleturquoise">DINNER_SELECTED</h1>
+        <div style="color: paleturquoise" id="game-over-text">
           <span>GAME OVER</span>
-          <input id = "over-retry-button" type = "button" class = "gameOverButton"> 
-          <button id="over-menu-button" class = "gameOverButton">Menu</button>
+          <input id="over-retry-button" type="button" class="gameOverButton" />
+          <button id="over-menu-button" class="gameOverButton">Menu</button>
         </div>
       </div>
     </div>
