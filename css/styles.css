@@ -1,8 +1,8 @@
-html, body{
-margin: 0;
-color: #525353;
+html,
+body {
+  margin: 0;
+  color: #525353;
 }
-
 
 #dino {
   width: 50px;
@@ -23,22 +23,22 @@ color: #525353;
 
   background-size: 20px 40px;
 
-  animation: block 2.3s infinite linear; 
+  animation: block 2.3s infinite linear;
 }
 
-.popcorn{
+.popcorn {
   background-image: url(../img/popcorn.png);
 }
 
-.note{
+.note {
   background-image: url(../img/note.png);
 }
 
-.fork{
+.fork {
   background-image: url(../img/fork.png);
 }
 
-.container #undo{
+.container #undo {
   margin-left: 30px;
   margin-top: 30px;
 }
@@ -77,7 +77,7 @@ color: #525353;
   font-family: "DINO";
 }
 
-#showInfo{
+#showInfo {
   top: 50%;
   left: 50%;
   transform: translate(195%, 220%);
@@ -88,7 +88,7 @@ color: #525353;
 }
 
 .game {
-  width: 900px;  
+  width: 900px;
   height: 263px;
   border: 1px solid #525353;
   position: fixed;
@@ -98,7 +98,7 @@ color: #525353;
   background-image: url(../img/earth2.png);
 }
 
-.info{
+.info {
   padding-top: 50px;
 }
 
@@ -106,32 +106,32 @@ color: #525353;
   display: none;
 }
 
-.gameOverButton{
+.gameOverButton {
   position: absolute;
   top: 230%;
   left: 63%;
   transform: translate(-50%, -50%);
 }
 
-.gameClearButton{
+.gameClearButton {
   position: absolute;
   top: 140%;
   left: 55%;
   transform: translate(-50%, -50%);
 }
 
-span{
+span {
   font-size: 20px;
 }
 
-.container h1{
+.container h1 {
   text-align: center;
   font-family: "DINO";
   margin-top: 0%;
 }
 
 button {
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: "DINO";
   background-color: #525353;
   border-radius: 4px;
@@ -140,7 +140,7 @@ button {
 }
 
 input#over-retry-button {
-  position: absolute; 
+  position: absolute;
   top: 230%;
   left: 29%;
   transform: translate(-50%, -50%);
@@ -165,10 +165,10 @@ input#clear-retry-button {
 }
 
 @font-face {
-    font-family: "DINO";
-    src: url("../fonts/DungGeunMo.ttf");
+  font-family: "DINO";
+  src: url("../fonts/DungGeunMo.ttf");
 }
-    
+
 @keyframes block {
   0% {
     left: 100%;
@@ -195,13 +195,13 @@ input#clear-retry-button {
   49% {
     top: 119px;
   }
- 
+
   66% {
     top: 134px;
   }
 
   82% {
-    top:169px;
+    top: 169px;
   }
 
   100% {
@@ -214,8 +214,6 @@ input#clear-retry-button {
   width: 100vw;
 }
 
-
-
 .moviebackground {
   width: 100%;
   height: 100vh;
@@ -225,7 +223,6 @@ input#clear-retry-button {
   background-position: center center;
 
   overflow: hidden;
-
 }
 
 .musicbackground {
@@ -237,7 +234,6 @@ input#clear-retry-button {
   background-position: center 40%;
 
   overflow: hidden;
-
 }
 
 .dinnerbackground {
@@ -249,41 +245,41 @@ input#clear-retry-button {
   background-position: center center;
 
   overflow: hidden;
-
 }
 
-.noEntry{
+.noEntry {
   display: None;
 }
 
 @media (max-width: 1000px) {
-  html, body{
-      margin: 0;
-      color: white;
-      height: 100vh;
-      width: 100%;
-      font-family: "DINO";
-      background-color: #252525;
+  html,
+  body {
+    margin: 0;
+    color: white;
+    height: 100vh;
+    width: 100%;
+    font-family: "DINO";
+    background-color: #252525;
 
-      overflow: hidden;
+    overflow: hidden;
   }
 
-  .dinnerbackground{
+  .dinnerbackground {
     display: none;
   }
 
-  .musicbackground{
+  .musicbackground {
     display: none;
   }
 
-  .moviebackground{
+  .moviebackground {
     display: none;
   }
-  .selectMenu{
+  .selectMenu {
     display: none;
   }
 
-  .noEntry{
+  .noEntry {
     display: grid;
     place-items: center;
     margin-top: 50%;

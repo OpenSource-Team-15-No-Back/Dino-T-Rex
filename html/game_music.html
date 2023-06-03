@@ -4,37 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dino Game</title>
-    <link rel="icon" type="image/png" href="note3.png">
+    <link rel="icon" type="image/png" href="note3.png" />
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
 
   <body>
     <div class="noEntry">지원하지 않는 화면 크기입니다.</div>
     <div class="musicbackground">
-      <div style = "border: 1px solid white;" class="game">
-        <div id="dino" style="filter: invert(100%) sepia(1%) saturate(7498%) hue-rotate(78deg) brightness(117%) contrast(100%);"></div>
+      <button id="playButton">재생</button>
+      <button id="muteButton">음소거</button>
+      <div style="border: 1px solid white" class="game">
+        <div
+          id="dino"
+          style="
+            filter: invert(100%) sepia(1%) saturate(7498%) hue-rotate(78deg)
+              brightness(117%) contrast(100%);
+          "></div>
         <div id="cactus" class="note"></div>
-        <div style = "color: white;" id="score">0</div>
+        <div style="color: white" id="score">0</div>
         <button id="showInfo">Show me NOW!!!</button>
         <div id="game-clear-text" class="hide">
-          <div style="color: white;"><span id="info1"></span><span id="title"></span></div>
-          <div style="color: white;"><span id="info2"></span><span id="artist"></span></div>
-          <input id = "clear-retry-button" type = "button" class = "gameClearButton"> 
-          <button id="clear-menu-button" class = "gameClearButton">Menu</button>
+          <div style="color: white">
+            <span id="info1"></span><span id="title"></span>
+          </div>
+          <div style="color: white">
+            <span id="info2"></span><span id="artist"></span>
+          </div>
+          <input
+            id="clear-retry-button"
+            type="button"
+            class="gameClearButton" />
+          <button id="clear-menu-button" class="gameClearButton">Menu</button>
         </div>
       </div>
       <div class="container">
         <button id="undo">◀</button>
-        <h1 style ="color: white;">MUSIC_SELECTED</h1>
-        <div style = "color: white;" id="game-over-text">
+        <h1 style="color: white">MUSIC_SELECTED</h1>
+        <div style="color: white" id="game-over-text">
           <span>GAME OVER</span>
-          <input id = "over-retry-button" type = "button" class = "gameOverButton"> 
-          <button id="over-menu-button" class = "gameOverButton">Menu</button>
+          <input id="over-retry-button" type="button" class="gameOverButton" />
+          <button id="over-menu-button" class="gameOverButton">Menu</button>
         </div>
-      </div> 
-    </div> 
-        <script src="../scripts.js"></script>
-      <script src="../music.js"></script>
-
+      </div>
+    </div>
+    <script src="../scripts.js"></script>
+    <script src="../music.js"></script>
   </body>
-</html> 
+</html>
