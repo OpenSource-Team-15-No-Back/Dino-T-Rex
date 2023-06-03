@@ -111,3 +111,10 @@ a:hover {
   text-align: start;
   line-height: 25px;
 }
+
+#playButton1,
+#muteButton1 {
+  border: none;
+  background-color: #333;
+  color: #fff;
+}
