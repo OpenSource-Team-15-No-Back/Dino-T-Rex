@@ -9,8 +9,8 @@ var audio6 = new Audio("../audio/jump.mp3");
 var audio2 = new Audio("../audio/reach_score.mp3");
 var audio3 = new Audio("../audio/game_over.mp3");
 
-const showMeNow_show = document.getElementById("showInfo")
-showMeNow_show.style.display = "none"
+const showMeNow_show = document.getElementById("showInfo");
+showMeNow_show.style.display = "none";
 let isAlive = setInterval(function () {
   // get current dino Y position
   let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
@@ -25,66 +25,72 @@ let isAlive = setInterval(function () {
     // game over
     clearInterval(isAlive);
     document.getElementById("game-over-text").classList.add("show");
-    cactus.style.display = "none"
+    cactus.style.display = "none";
     audio3.play();
   }
 }, 10);
 
 function jump() {
-  if (dino.classList != "jump") { 
+  if (dino.classList != "jump") {
     dino.classList.add("jump");
-    count++
-    if (count % 4 == 0){
-      audio1.play()
-    } else if (count % 4 == 1){
-      audio4.play()
-    } else if (count % 4 == 2){
-      audio5.play()
-    }else{
-      audio6.play()
+    count++;
+    if (count % 4 == 0) {
+      audio1.play();
+    } else if (count % 4 == 1) {
+      audio4.play();
+    } else if (count % 4 == 2) {
+      audio5.play();
+    } else {
+      audio6.play();
     }
     setTimeout(function () {
       dino.classList.remove("jump");
 
       // 충돌하지 않았을 때 점수 증가
-      let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
-      
-      console.log(cactusLeft)
-      if ((cactusLeft >= 856 && cactusLeft <= 899)||cactusLeft == 0) { // cactus를 넘었을경우 즉, 화면에서 왼쪽으로 벗어나면 점수가 증가하도록 수정
+      let cactusLeft = parseInt(
+        window.getComputedStyle(cactus).getPropertyValue("left")
+      );
+
+      console.log(cactusLeft);
+      if ((cactusLeft >= 856 && cactusLeft <= 899) || cactusLeft == 0) {
+        // cactus를 넘었을경우 즉, 화면에서 왼쪽으로 벗어나면 점수가 증가하도록 수정
         // 점수 증가(화면 비율에 따른 좌표 조정 필요
         scoreValue++;
         score.textContent = scoreValue;
 
-        if (scoreValue >=5) {
+        if (scoreValue >= 5) {
           score.textContent = "";
-          showMeNow_show.style.display = "block"
+          showMeNow_show.style.display = "block";
           cactus.style.display = "none"; // cactus 숨기기
           audio2.play();
         }
-      } else if (cactusLeft <= 855 && cactusLeft >= 825){
+      } else if (cactusLeft <= 855 && cactusLeft >= 825) {
         clearInterval(isAlive);
         document.getElementById("game-over-text").classList.add("show");
-        cactus.style.display = "none"
+        cactus.style.display = "none";
         audio3.play();
       }
     }, 300);
   }
 }
 
-function resetGame() { 
-  
+function resetGame() {
   document.getElementById("game-over-text").classList.remove("show");
 
-  isAlive = setInterval(function () { 
-      let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
-      let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
+  isAlive = setInterval(function () {
+    let dinoTop = parseInt(
+      window.getComputedStyle(dino).getPropertyValue("top")
+    );
+    let cactusLeft = parseInt(
+      window.getComputedStyle(cactus).getPropertyValue("left")
+    );
 
-      if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 184) {
-          clearInterval(isAlive);
-          document.getElementById("game-over-text").classList.add("show");
-          cactus.style.display = "none"; // cactus 숨기기
-          audio3.play();
-      }
+    if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 184) {
+      clearInterval(isAlive);
+      document.getElementById("game-over-text").classList.add("show");
+      cactus.style.display = "none"; // cactus 숨기기
+      audio3.play();
+    }
   }, 10);
 
   dino.style.top = "184px";
@@ -98,8 +104,8 @@ function resetGame() {
 
 document.addEventListener("keydown", function (event) {
   event.preventDefault();
-  if (event.key == 'ArrowUp' || event.key == ' '){
-    if (scoreValue < 5 && cactus.style.display != "none"){ 
+  if (event.key == "ArrowUp" || event.key == " ") {
+    if (scoreValue < 5 && cactus.style.display != "none") {
       // count++
       // if (count % 4 == 0){
       //   audio1.play()
@@ -115,38 +121,46 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-var count = 0
+var count = 0;
 
-document.getElementById("over-retry-button").addEventListener("click", function () {
-  resetGame();
+document
+  .getElementById("over-retry-button")
+  .addEventListener("click", function () {
+    resetGame();
+    audio1.play();
+  });
+
+document
+  .getElementById("over-menu-button")
+  .addEventListener("click", function () {
+    setTimeout(function () {
+      window.location.href = "../index.html";
+    }, 135);
+  });
+
+document
+  .getElementById("clear-retry-button")
+  .addEventListener("click", function () {
+    resetGame();
+    audio1.play();
+  });
+
+document
+  .getElementById("clear-menu-button")
+  .addEventListener("click", function () {
+    audio1.play();
+    setTimeout(function () {
+      window.location.href = "../index.html";
+    }, 180);
+  });
+
+document.getElementById("showInfo").addEventListener("click", function () {
   audio1.play();
 });
 
-document.getElementById("over-menu-button").addEventListener("click", function () {
-  setTimeout(function() {
-    window.location.href = '../index.html';
-  }, 135); 
-});
-
-document.getElementById("clear-retry-button").addEventListener("click", function () {
-  resetGame();
+document.getElementById("undo").addEventListener("click", function () {
   audio1.play();
-});
-
-document.getElementById("clear-menu-button").addEventListener("click", function () {
-  audio1.play();
-  setTimeout(function() {
-    window.location.href = '../index.html';
-  }, 180); 
-});
-
-document.getElementById("showInfo").addEventListener("click",function() {
-  audio1.play();
-})
-
-document.getElementById("undo").addEventListener("click",function() {
-  audio1.play();
-  setTimeout(function() {
-    window.location.href = '../index.html';
+  setTimeout(function () {
+    window.location.href = "../index.html";
   }, 200);
 });
