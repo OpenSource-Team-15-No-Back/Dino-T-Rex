@@ -307,27 +307,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const audioElement = document.createElement("audio")
   audioElement.src = "../audio/chapter1.mp3"
 
-  const playButton = document.getElementById("playButton")
   const muteButton = document.getElementById("muteButton")
 
   audioElement.muted = false
-  muteButton.textContent = "음소거"
+  muteButton.textContent = "재생"
 
-  playButton.addEventListener("click", function() {
-    audioElement.play()
-  })
-
-  muteButton.addEventListener("click", function() {
-    if (audioElement.muted) {
-      audioElement.muted = false
-      muteButton.textContent = "음소거"
-    } else{
-      audioElement.muted = true
-      muteButton.textContent = "음소거 해제"
+  muteButton.addEventListener("click", function () {
+    clicked++
+    if (audioElement.muted || clicked == 1) {
+      audioElement.play();
+      muteButton.textContent = "일시정지";
+    } else {
+      audioElement.pause();
+      muteButton.textContent = "재생";
     }
-  })
-  document.body.appendChild(audioElement)
-})
+  });
+  document.body.appendChild(audioElement);
+});
 
 function showDinnerMenuInfo() {
   const gameClearText = document.getElementById("game-clear-text")
