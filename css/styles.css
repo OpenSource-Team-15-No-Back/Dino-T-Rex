@@ -179,6 +179,7 @@ input#clear-retry-button {
   }
 }
 
+/* 점프 */
 @keyframes jump {
   0% {
     top: 184px;
