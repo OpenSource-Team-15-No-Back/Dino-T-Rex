@@ -76,23 +76,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const audioElement = document.createElement("audio");
   audioElement.src = "../audio/chapter2.mp3";
 
-  const playButton = document.getElementById("playButton");
   const muteButton = document.getElementById("muteButton");
 
-  audioElement.muted = false;
-  muteButton.textContent = "음소거";
 
-  playButton.addEventListener("click", function () {
-    audioElement.play();
-  });
+  audioElement.muted = false;
+  muteButton.textContent = "재생";
 
   muteButton.addEventListener("click", function () {
-    if (audioElement.muted) {
-      audioElement.muted = false;
-      muteButton.textContent = "음소거";
+    clicked++
+    if (audioElement.muted || clicked == 1) {
+      audioElement.play();
+      muteButton.textContent = "일시정지";
     } else {
-      audioElement.muted = true;
-      muteButton.textContent = "음소거 해제";
+      audioElement.pause();
+      muteButton.textContent = "재생";
     }
   });
   document.body.appendChild(audioElement);
