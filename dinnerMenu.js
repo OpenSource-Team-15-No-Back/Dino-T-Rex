@@ -314,7 +314,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   muteButton.addEventListener("click", function () {
     clicked++
-    if (audioElement.muted || clicked == 1) {
+    console.log(clicked)
+    if (audioElement.paused || clicked == 1) {
       audioElement.play();
       muteButton.textContent = "일시정지";
     } else {
